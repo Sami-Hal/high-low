@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guess the random number</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body onload="pickNumber()">
+    <div class="container">
+        <div class="settings">
+            <h1>I have a random number between 1-100</h1>
+            <h2>Dare to guess?</h2>
+            <hr/>
+            <p>Select difficulty setting:</p>
+            <div class="buttonContainer">
+            <button data-time="10" class="attemptButton">Easy: Guess in 10 attempts (default)</button>
+            <button data-time="5" class="attemptButton">Hard: Guess in 5 attempts</button>
+            </div>
+        </div>
+        <div class="inputField">
+            <h2>Enter your guess below & press enter</h2>
+            <form name="myForm" id="form">
+                <input type="number" name="numbers" placeholder="Enter a number between 1-100" min="1" max="100">
+            </form>
+            <p>Number of previous attempts</p>
+            <p id="attempts"></p>
+        </div>
+        <div class="previousGuesses">
+            <p id="textOne">Your previous guesses:</p>
+            <p></p>
+        </div>
+    </div>
+    <script src="myapp.js"></script>
+</body>
+</html>
